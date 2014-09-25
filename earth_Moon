@@ -1,0 +1,29 @@
+package earth;
+
+
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Moon extends Objects {
+	
+	
+	
+	public Moon(int x, int y) {
+		super(x,y);
+		w = 50; h = 50;v = 0.2;r = 300;
+	}
+
+	public void draw(Graphics g){
+		move();
+		g.setColor(Color.WHITE);
+		g.fillOval(x, y, w, h);
+	}
+	
+	private void move(){
+		
+		a += v * 0.17;
+		x = (int) (500 + r*Math.cos(a));
+		y = (int) (500 + r*Math.sin(a));
+	}
+}
