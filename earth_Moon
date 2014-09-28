@@ -11,16 +11,16 @@ public class Moon extends Objects {
 	
 	public Moon(int x, int y) {
 		super(x,y);
-		w = 50; h = 50;v = 0.2;r = 300;
+		w = 25; h = 25;v = 0.2;r = 100;
 	}
 
 	public void draw(Graphics g){
-		move();
-		g.setColor(Color.WHITE);
-		g.fillOval(x, y, w, h);
+		this.move();
+		g.setColor(Color.ORANGE);
+		g.fillOval(x-w, y-h, w*2, h*2);
 	}
 	
-	private void move(){
+	public void move(){
 		
 		a += v * 0.17;
 		x = (int) (500 + r*Math.cos(a));
