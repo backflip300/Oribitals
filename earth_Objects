@@ -1,6 +1,6 @@
 package earth;
 
-import java.awt.Graphics;
+
 
 public abstract class Objects {
 	
@@ -18,10 +18,7 @@ public abstract class Objects {
 		this.y = y;
 		
 	}
-	
-	public void draw(Graphics g){
-		
-	}
+
 	
 	public static int getX() {
 		return x;
@@ -34,6 +31,9 @@ public abstract class Objects {
 	}
 	public int getH() {
 		return h;
+	}
+	public void setH(int h) {
+		this.h = h;
 	}
 	public void setR(double r) {
 		this.r = r;
